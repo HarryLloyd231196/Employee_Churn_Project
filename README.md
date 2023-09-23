@@ -2,7 +2,6 @@
 
 ---
 
-
 <h4>Table of contents </h4>
 
 - Introduction  
@@ -112,6 +111,8 @@ The steps followed to tidy the employee dataframe are outlined below.
 Once the machine learning models have generated actionable clusters, a single churn 
  employee cluster was selected for an attributes analysis, highlighting specific metrics to target for an employee churn reduction strategy.
 
+ ---
+
  <h2> Results: Data Exploration and Modelling </h2>
 
  <h3> Emploratory Analysis: </h3>
@@ -121,6 +122,7 @@ Once the machine learning models have generated actionable clusters, a single ch
 The first step of the data exploration process was an evaluation of the ‘Resigned’ status of the data frame.
 Across Revolution Consulting, 16.1% of the surveyed employees had resigned within the survey period, with 83.9% maintaining their employment (Figure 1). With this baseline set, the analysis team then worked systematically through the twenty (20) attributes against each observation to generate a more comprehensive picture of the general pattern of resignation. The following section outlines key observations made through this exploratory analysis. A complete list of these plots and observations can be found in appendix 1.
 
+![download](https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/6db86f5e-cb05-419b-96f0-f52cbfa3f612)
 
 
 
