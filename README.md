@@ -95,25 +95,31 @@ The steps followed to tidy the employee dataframe are outlined below.
 - Drop sources of data leakage (EmployeeID).
 - Drop uncorrelated values to simplify dataframe and avoid excessive multi-dimensionality.
 
-<h4>K-means Modelling:</h4>
+<h4> K-means Modelling: </h4>
 
 - Select a number fo K values for modelling the data (value for 'K' determined by the "Within Cluseter Sum of Squares" & "Silhouette Coefficient").
 - Test clustering for assigned K value
 - Recalibrate K and re-model for actionable clustering.
 
-<h4>DBSCAN Modelling:</h4>
+<h4> DBSCAN Modelling: </h4>
 
 - Run Nearest Neighbours plot to determine epsilon (Eps) value for DBSCAN modelling.
 - Test clustering for assigned Eps value.
 - Recalibrate Eps and re-model for actionable clustering.
 
-  <h3>Evaluation Strategy:</h3>
+  <h3> Evaluation Strategy: </h3>
 
 Once the machine learning models have generated actionable clusters, a single churn 
  employee cluster was selected for an attributes analysis, highlighting specific metrics to target for an employee churn reduction strategy.
 
- <h2> Results: Data Exploration and Modelling</h2>
+ <h2> Results: Data Exploration and Modelling </h2>
 
+ <h3> Emploratory Analysis: </h3>
+
+ <h4> Resignation Status: </h4>
+
+The first step of the data exploration process was an evaluation of the ‘Resigned’ status of the data frame.
+Across Revolution Consulting, 16.1% of the surveyed employees had resigned within the survey period, with 83.9% maintaining their employment (Figure 1). With this baseline set, the analysis team then worked systematically through the twenty (20) attributes against each observation to generate a more comprehensive picture of the general pattern of resignation. The following section outlines key observations made through this exploratory analysis. A complete list of these plots and observations can be found in appendix 1.
 
 
 
