@@ -54,5 +54,68 @@ Revolution Consulting (RC) is an IT company that offers services centred on AI m
 | YearsSinceLastPromotion| 16            | Interval/Ratio | Time since last promotion
 | YearsWithCurrManager   | 18            | Interval/Ratio | Time spent under current manager
 
+<h2>Methodology:</h2>
+<h3>Overview:</h3>
+The objective of this analysis was to identify key factors contributing to high rates of employee churn
+and attrition within Revolution Consulting. First a preliminary data exploration was carried out
+looking into single attributes within the data to identify relevant or causal factors. Then the team
+engaged in a targeted relationship analysis of identified causal factors with the intent of deepening
+our understanding of potential causes of employee churn. Following these evaluations, unsupervised
+machine learning models were employed to analyse the data. This report used the K-Means and
+DBSCAN machine learning models to cluster the data identified in the first two steps of this analysis.
+
+<h2>Process:</h2>
+<h3>Exploratory Analysis:</h3>
+In order to understand the wider context within which the data modelling would take place, the data
+analysis team first undertook a preliminary assessment of the data provided by Human Resources.
+Designed with the intent to uncover potential causal factors, this exploratory analysis looked at 20
+employee attributes that were believed to have an influence on employee resignation rates. Each
+attribute was first assessed in isolation to identify any correlation it had with employee resignation.
+
+<h3>Relationship Analysis:</h3>
+Following the initial analysis, 10 pairs of selected attributes were analysed with the intent to deepen
+the team's understanding of the situation, and to refine the attributes selected for the data
+modelling process.
+
+<h3>Steps:</h3>
+
+- Import libraries into the environment for conducting the analysis
+- Read in .csv data
+- Preliminary dataframe check for missing, incorrect and NaN values
+- Exploratory Analysis
+- Correlation Evaluation
+
+<h3>Data Modeling:</h3>
+
+The data modeling carried out in this report utilised unsupervised machine learning algorithms (K-means & DBSCAN) in order to cluster a selected multi-dimensional dataframe. This is a commonly used technique employed to identify clusters within a dataset, allowing for a targeted analysis of the resulting clusters to reveal their specific attributes. In order to correctly generate these models it is important to first "tidy" the data to ensure there are no abnormal results.
+
+The steps followed to tidy the employee dataframe are outlined below.
+
+- Drop the target value (Resigned) from the dataframe to ensure it does not influence clustering.
+- Drop sources of data leakage (EmployeeID).
+- Drop uncorrelated values to simplify dataframe and avoid excessive multi-dimensionality.
+
+<h4>K-means Modelling:</h4>
+
+- Select a number fo K values for modelling the data (value for 'K' determined by the "Within Cluseter Sum of Squares" & "Silhouette Coefficient").
+- Test clustering for assigned K value
+- Recalibrate K and re-model for actionable clustering.
+
+<h4>DBSCAN Modelling:</h4>
+
+- Run Nearest Neighbours plot to determine epsilon (Eps) value for DBSCAN modelling.
+- Test clustering for assigned Eps value.
+- Recalibrate Eps and re-model for actionable clustering.
+
+  <h3>Evaluation Strategy:</h3>
+
+Once the machine learning models have generated actionable clusters, a single churn 
+ employee cluster was selected for an attributes analysis, highlighting specific metrics to target for an employee churn reduction strategy.
+
+ <h2> Results: Data Exploration and Modelling</h2>
+
+
+
+
 
 
