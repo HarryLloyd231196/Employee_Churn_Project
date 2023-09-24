@@ -193,13 +193,17 @@ Figure 7 illustrates Monthly Income as a function of AWHW for employees and reve
 
 The analysis team hypothesised that employees who believe they are underpaid for their experience in a given role would be another cohort likely to resign. However the data showed that once an employee had over 10 years in a role the likelihood of their resignation dramatically decreased. In fact, the employees who were most likely to resign were those with under 5 years in a role who were earning less than $7,500 a month. This pattern of resignation intensifies as YearsInRole and MonthlyIncome decrease.
 
-> Insert Image Here
+<p align="center">
+	<img src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/5f62b13c-3861-44a6-b1a7-8e008dac0a09"
+ <p/>
 
 <h4> Total Working Years (TWY) / Average Weekly Hours Worked (AWHW): </h4>
 
 In a continued investigation into the influence of AWHW, the analysis team paired the attribute with the reported Total Working Years of employees. The analysis team hypothesised that young employees at the start of their careers would feel overworked if they are extended beyond an average of 40 hours a week too early in their careers and would likely resign as a result. Figure 9 demonstrates that the team’s hypothesis was for the most part accurate, with a distinct cluster of resigned employees who reported less than 13 Total Working Years that were concurrently working between 49 to 57 hours a week. Equally important, once employees had over 15 Total Working Years reported, the proportion who resigned substantially decreased.
 
-> Insert Image Here
+<p align="center">
+	<img src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/c48e7eef-8b19-4610-bd1a-78876f0ac3d9"
+ <p/>
 
 <h3> Data Modelling: </h3>
 
@@ -211,13 +215,33 @@ The analysis team employed the K-Means clustering technique to evaluate two sele
 
 In order to determine an appropriate K value to run through the model, a Within Cluster Sum of Square (WCSS) and a Silhouette Coefficient were graphed and have been provided below. When appraising a WCSS score, the “elbow” within the chart is used to denote an appropriate value for "K", in this instance 3. This value is confirmed with a silhouette score of 0.62
 
-> Insert Image Here
+<p align="center">
+	<img src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/afbeee2a-386c-44ac-bc94-3a3705341905"
+ <p/>
 
-> Insert Image Here
+<p align="center">
+	<img src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/2bdfa4fa-83b3-492d-9732-f9fa23651b6e"
+ <p/>
 
 When the K-means machine learning algorithm was run however the clustering result did not provide meaningful or actionable data. The clustering result provided insignificant deviation from the general rate of resignation of 16.1% illustrated in figure 1, with Cluster 0 only increasing by 3.4%
 
-> Insert Image Here
+<p align="center">
+  <img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/f72a2330-724f-4e9d-9ac2-772a5dda9f24" 
+	width="30%">
+	
+&nbsp; &nbsp;
+
+  <img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/bac9dab6-0b91-41f8-98de-918af8b86a15" 
+	width="30%">
+ 
+&nbsp; &nbsp;
+
+   <img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/060ee6b5-f5ad-465d-bca9-9c6d7dbd40e9" 
+	width="30%">
+</p>
 
 Despite 3 appearing to be the most appropriate "K" value for model clustering, the intent of this report is to provide recommendations to the management team in order to reduce employee turnover. The above modelling result as such does not suit the requirements of management and the model was reconfigured and re-run.
 
@@ -225,22 +249,29 @@ Despite 3 appearing to be the most appropriate "K" value for model clustering, t
 
 The second appropriate "K" value identified in the Silhouette Score plot was 7, with a silhouette score of slightly lower than 0.62 as run in the previous model when "K" = 3. This second clustering model produced a series with a greater degree of significance, however only cluster 0 was deemed by the analysis team to be of merit due to its size and ‘Resigned’ rate of 26.2% (Cluster ratios in Appendix 3). Cluster 3 is also of note with a 0% Resignation rate.
 
-> Insert Image Here
+<p align="center">
+	<img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/5f12df59-ab03-46d4-a4df-074be72b8a82"
+</p>
 
 <h4> Model 2: DBSCAN (Eps 200) </h4>
 
 The DBSCAN method was implemented as a means to strengthen the results of the data modelling process. DBSCAN modelling clusters data points based on their relative density to one another and unlike k-means modelling, self-identifies the number of clusters through a calculation of density as a function of distance (epsilon) and a minimum number of neighbours (MinPts). The variable assigned to MinPts is usually set to the number of attributes, in this case 14, plus 1, giving a final value of MinPts = 15. Epsilon is calculated in a similar fashion to WCSS, and is plotted on the following page. In a similar fashion to selecting for K with the WCSS value, epsilon is decided by locating the ‘elbow’ in the plot. In this instance an epsilon of 200 was selected. When the model was run however the clustering result was ineffectual, with the vast majority of observations evaluated into a single cluster (cluster 0) with a resignation rate (17.1%) similar to the firm wide value (16.1%) in figure 1.
 
-> Insert Image Here
-
-> Insert Image Here
+<p align="center">
+	<img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/55fd0e3d-198d-4a4e-ab55-2d3546941798"
+</p>
 
 <h4> Model 2 Re-worked: DBSCAN (Eps 100) </h4>
 
 Following the over-clustering of the previous DBSCAN Model, the algorithm was recalibrated with a decreased epsilon value of 100 in an  attempt to raise the observation density required before the DBSCAN model attributed a cluster value to an observation. This change was made in an attempt to coerce the DBSCAN algorithm into generating a productive clustering outcome model to aid in our investigation. In spite of this change, the resulting model was dominated by a single cluster
 and the algorithm classified a large number of variables as ‘noise’.
 
-> Insert Image Here
+<p align="center">
+	<img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/9613e94e-0ce1-4971-a895-b044367330d1"
+</p>
 
 <h2> Discussion: </h2>
 
@@ -251,17 +282,28 @@ Of the two approaches implemented in this analysis, the K-means model was able t
 
 has been identified throughout this report as a major factor contributing to the likelihood of employee resignation. Within cluster 0, If an employee worked overtime they were more likely to resign, than to continue their tenure with the company. Reducing the % of employees who are required to work overtime should be a core priority for the management team.
 
-> Insert Image Next to Text if Possible.
+<p align="center">
+	<img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/ed58000e-cfd1-43ae-8f15-af0d6f3fafa3"
+</p>
 
 <h4> Average Weekly Hours Worked (AWHW): </h4>
 
 AWHW is inherently tied to Overtime, however it provides more detailed insights than the binary attribute it falls under. Employees who complete over 40 AWHW but remain under 45, have a far higher retention rate than those who exceed 45 hours.
 
-> Insert Image
+<p align="center">
+	<img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/6a1bc792-e66b-448a-9602-ee956ae0e3fa"
+</p>
 
 <h4> Monthly Income: </h4>
 
 Monthly Income is another core attribute contributing to employee resignation. Within cluster 0, employee’s monthly income ranged from $1,009 to $3,622. Employees who earn under approximately $1,750 a month are more likely to resign than to continue their tenure with the company. Reducing the number of employees taking home less than $1,750 a month will reduce the rate of employee churn amongst low level employees.
+
+<p align="center">
+	<img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/b24c27f4-0af2-4d4d-86be-f882b37e16a1"
+</p>
 
 <h2> Recommendation: </h2>
 
@@ -280,6 +322,34 @@ models to interpret the complex data provided by Human Resources. These models, 
 
 Throughout the plotting process the colour schemes of Seaborn and Matplotlib repeatedly inverted, resulting in colouring against usual convention. ie. Blue for negative values ie ‘Resigned’ and Red for positive. This occurrence was also inconsistent, with some plots generating appropriately whilst others did not. The colour schemes used throughout this document should be amended to ensure they are consistent and in keeping with convention prior to circulation.
 
+<h4> References: </h4>
+
+ChartExpo (2023) How to Read a Box Plot Chart? Easy-to-follow Steps, ChartExpo, accessed 7 February 2023. [https://chartexpo.com/blog/how-to-read-a-box-plot] 
+
+Corey Schafer 2020 Matplotlib Tutorial (Part 3): Pie Charts, Youtube, accessed 7 February 2023 [https://www.youtube.com/watch?v=MPiz50TsyF0]
+
+Datagy 2022 Seaborn histplot – Creating Histograms in Seaborn, Datagy.io, accessed 8 February 2023 [https://datagy.io/seaborn-histplot/] 
+
+MatPlotlib, n.d., MatPlotlib 3.6.3 Documentation, MatPlotlib, accessed 8 February 2023 [https://matplotlib.org/stable/index.html] 
+
+RMIT University, n.d, Easy Cite referencing guide, RMIT Library, accessed 10 February 2023 [https://www.lib.rmit.edu.au/easy-cite/?styleguide=styleguide-1#stn-5#subtype-36]  
+
+Seaborn (2022) Seaborn.catplot, Seaborn, accessed 7 February 2023
+[https://seaborn.pydata.org/generated/seaborn.lineplot.html]
+
+Seaborn (2022) Seaborn.histplot, Seaborn, accessed 7 February 2023
+[https://seaborn.pydata.org/generated/seaborn.histplot.html]
+
+Seaborn (2022) Seaborn.lineplot, Seaborn, accessed 10 February 2023
+[https://seaborn.pydata.org/generated/seaborn.lineplot.html]
+
+Seaborn (2022) Seaborn.boxplot, Seaborn, accessed 7 February 2023
+[https://seaborn.pydata.org/generated/seaborn.boxplot.html]
+
+Seaborn (2022) Seaborn.boxplot, Seaborn, accessed 7 February 2023
+[https://seaborn.pydata.org/generated/seaborn.stripplot.html#seaborn.stripplot]
+
+Statology (2022) ‘How to Change Axis Labels on a Seaborn Plot (With Examples)’, Statology, accessed 10 February 2023 [https://www.statology.org/seaborn-axis-labels/]
 
 
 
