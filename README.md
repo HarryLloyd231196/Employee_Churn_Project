@@ -198,30 +198,29 @@ The analysis team employed the K-Means clustering technique to evaluate two sele
 In order to determine an appropriate K value to run through the model, a Within Cluster Sum of Square (WCSS) and a Silhouette Coefficient were graphed and have been provided below. When appraising a WCSS score, the “elbow” within the chart is used to denote an appropriate value for "K", in this instance 3. This value is confirmed with a silhouette score of 0.62
 
 <p align="center">
-	<img src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/afbeee2a-386c-44ac-bc94-3a3705341905"
+  <img 
+	  src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/afbeee2a-386c-44ac-bc94-3a3705341905"
+	  width="45%">
+	&nbsp; &nbsp; &nbsp; &nbsp;
+  <img
+	  src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/2bdfa4fa-83b3-492d-9732-f9fa23651b6e"
+	  width="45%">
  <p/>
 
-<p align="center">
-	<img src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/2bdfa4fa-83b3-492d-9732-f9fa23651b6e"
- <p/>
 
 When the K-means machine learning algorithm was run however the clustering result did not provide meaningful or actionable data. The clustering result provided insignificant deviation from the general rate of resignation of 16.1% illustrated in figure 1, with Cluster 0 only increasing by 3.4%
 
 <p align="center">
   <img
-src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/f72a2330-724f-4e9d-9ac2-772a5dda9f24" 
+	src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/f72a2330-724f-4e9d-9ac2-772a5dda9f24" 
 	width="30%">
-	
-&nbsp; &nbsp;
-
+&nbsp; &nbsp; &nbsp; &nbsp;
   <img
-src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/bac9dab6-0b91-41f8-98de-918af8b86a15" 
+	src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/bac9dab6-0b91-41f8-98de-918af8b86a15" 
 	width="30%">
- 
-&nbsp; &nbsp;
-
-   <img
-src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/060ee6b5-f5ad-465d-bca9-9c6d7dbd40e9" 
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img
+	src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/060ee6b5-f5ad-465d-bca9-9c6d7dbd40e9" 
 	width="30%">
 </p>
 
