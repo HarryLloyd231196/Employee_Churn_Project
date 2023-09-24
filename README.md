@@ -191,4 +191,39 @@ Figure 7 illustrates Monthly Income as a function of AWHW for employees and reve
 
 <h4> Monthly Income / Years in Role: </h4>
 
+The analysis team hypothesised that employees who believe they are underpaid for their experience in a given role would be another cohort likely to resign. However the data showed that once an employee had over 10 years in a role the likelihood of their resignation dramatically decreased. In fact, the employees who were most likely to resign were those with under 5 years in a role who were earning less than $7,500 a month. This pattern of resignation intensifies as YearsInRole and MonthlyIncome decrease.
+
+> Insert Image Here
+
+<h4> Total Working Years (TWY) / Average Weekly Hours Worked (AWHW): </h4>
+
+In a continued investigation into the influence of AWHW, the analysis team paired the attribute with the reported Total Working Years of employees. The analysis team hypothesised that young employees at the start of their careers would feel overworked if they are extended beyond an average of 40 hours a week too early in their careers and would likely resign as a result. Figure 9 demonstrates that the team’s hypothesis was for the most part accurate, with a distinct cluster of resigned employees who reported less than 13 Total Working Years that were concurrently working between 49 to 57 hours a week. Equally important, once employees had over 15 Total Working Years reported, the proportion who resigned substantially decreased.
+
+> Insert Image Here
+
+<h3> Data Modelling: </h3>
+
+The data used within the K-Means and the DBSCAN modelling techniques only included attributes found within the exploratory and relationship analysis to have an influence on rates of resignation. For example, 16.1% of employees with a performance rating of 3 resigned, compared to 16.4% of employees with a rating of 4. From this observation it is clear that performance rating has little to no effect on the choice to resign, and as such it is dropped from the modelling data. Nominal data has also been removed.
+
+<h4> Model 1: K-Means Cluster: </h4>
+
+The analysis team employed the K-Means clustering technique to evaluate two selected data frames for meaningful employee clusters. The first dataframe included 14 attributes deemed to be significant and are as follows; Age, BusinessTravel, EducationLevel, JobSatisfaction, MonthlyIncome, OverTime, AWHW, TotalWorkingYears, TrainingTimesLastYear, WorkLifeBalance, YearsAtCompany, YearsInRole, YearsSinceLastPromotion, YearsWithCurrManager.  
+
+In order to determine an appropriate K value to run through the model, a Within Cluster Sum of Square (WCSS) and a Silhouette Coefficient were graphed and have been provided below. When appraising a WCSS score, the “elbow” within the chart is used to denote an appropriate value for "K", in this instance 3. This value is confirmed with a silhouette score of 0.62
+
+> Insert Image Here
+
+> Insert Image Here
+
+When the K-means machine learning algorithm was run however the clustering result did not provide meaningful or actionable data. The clustering result provided insignificant deviation from the general rate of resignation of 16.1% illustrated in figure 1, with Cluster 0 only increasing by 3.4%
+
+> Insert Image Here
+
+Despite 3 appearing to be the most appropriate "K" value for model clustering, the intent of this report is to provide recommendations to the management team in order to reduce employee turnover. The above modelling result as such does not suit the requirements of management and the model was reconfigured and re-run.
+
+
+
+
+
+
 
