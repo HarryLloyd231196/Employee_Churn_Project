@@ -123,7 +123,45 @@ The first step of the data exploration process was an evaluation of the ‘Resig
 Across Revolution Consulting, 16.1% of the surveyed employees had resigned within the survey period, with 83.9% maintaining their employment (Figure 1). With this baseline set, the analysis team then worked systematically through the twenty (20) attributes against each observation to generate a more comprehensive picture of the general pattern of resignation. The following section outlines key observations made through this exploratory analysis. A complete list of these plots and observations can be found in appendix 1.
 
 <p align="center">
-  <img src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/6db86f5e-cb05-419b-96f0-f52cbfa3f612"/>
+	<img src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/6db86f5e-cb05-419b-96f0-f52cbfa3f612"/>
 </p>
+
+<h4>Resignation by Monthly Income:</h4>
+
+Remuneration is widely regarded as a prime causal factor leading to employee resignation. It is perceived as a yardstick against which an employee can gauge the value of their labour to an employer and indirectly how their employer values them. This belief is reflected within the data gathered on employee monthly incomes in figure 2. Ex-employees who resigned from RC in the surveyed period received a median monthly income (approx $3,300) that was substantially lower than those who maintained their employment at RC (approx $5,100). This stark difference in income between past and present employees highlights income as a causal factor in an employee's decision to resign.
+
+<p align="center">
+	<img	src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/c8c5c718-b063-4e20-939f-c532c099218d"/>
+</p>
+
+<h4>Resignation by Age:</h4>
+
+The exploratory analysis also revealed employees under the age of 40 as a key cohort in relation to employee resignation. Peaking at around 28-30 years of age, employees who are under 40 have a substantially higher propensity to resign than their older colleagues. Interestingly, employees under 20 years of age were more likely to resign than to stay with the firm, and employees aged 20-22 had
+an approximately 50% chance of resigning. This churn of younger employees represents a significant long-term concern for Revolution Consulting. Younger employees are more likely to have received contemporary training and education prior to commencing their tenure and have the potential to modernise practices at the firm. These employees are also likely to require a higher degree of training and exposure, losing these employees after spending resources on their development is a poor outcome for RC.
+
+<p align="center">
+	<img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/b783880f-1b4c-43fa-a25a-ab0f51aae2fa"/>
+</p>
+
+<h4>Resignation by Overtime:</h4>
+
+Another cohort of concern identified in the exploratory analysis was employees who recorded having worked overtime within the survey period with 30.5% of these employees resigning. When contrasted against those who were not required to work overtime, with a 10.4% rate of resignation, this makes a substantial increase in the likelihood of an employee to resign. When expressed as an approximate fraction, this is an increase from 1 in 10 employees resigning, to 1 in 3.
+
+<p align="center">
+  <img
+	src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/2433a2b6-59d2-4bb2-8ef5-943702abbcff" 
+	width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img
+	src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/7daee86d-03f4-4a69-87a9-c0bbd0c2cf10" 
+	width="45%">
+</p>
+
+
+
+
+
+
 
 
