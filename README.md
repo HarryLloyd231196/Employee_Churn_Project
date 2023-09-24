@@ -245,7 +245,7 @@ src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638
 
 Despite 3 appearing to be the most appropriate "K" value for model clustering, the intent of this report is to provide recommendations to the management team in order to reduce employee turnover. The above modelling result as such does not suit the requirements of management and the model was reconfigured and re-run.
 
-<h3> Model 1 Re-worked: K-Means Cluster: </h3>
+<h4> Model 1 Re-worked: K-Means Cluster: </h3>
 
 The second appropriate "K" value identified in the Silhouette Score plot was 7, with a silhouette score of slightly lower than 0.62 as run in the previous model when "K" = 3. This second clustering model produced a series with a greater degree of significance, however only cluster 0 was deemed by the analysis team to be of merit due to its size and ‘Resigned’ rate of 26.2% (Cluster ratios in Appendix 3). Cluster 3 is also of note with a 0% Resignation rate.
 
