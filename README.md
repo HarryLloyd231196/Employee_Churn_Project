@@ -221,6 +221,65 @@ When the K-means machine learning algorithm was run however the clustering resul
 
 Despite 3 appearing to be the most appropriate "K" value for model clustering, the intent of this report is to provide recommendations to the management team in order to reduce employee turnover. The above modelling result as such does not suit the requirements of management and the model was reconfigured and re-run.
 
+<h3> Model 1 Re-worked: K-Means Cluster: </h3>
+
+The second appropriate "K" value identified in the Silhouette Score plot was 7, with a silhouette score of slightly lower than 0.62 as run in the previous model when "K" = 3. This second clustering model produced a series with a greater degree of significance, however only cluster 0 was deemed by the analysis team to be of merit due to its size and ‘Resigned’ rate of 26.2% (Cluster ratios in Appendix 3). Cluster 3 is also of note with a 0% Resignation rate.
+
+> Insert Image Here
+
+<h4> Model 2: DBSCAN (Eps 200) </h4>
+
+The DBSCAN method was implemented as a means to strengthen the results of the data modelling process. DBSCAN modelling clusters data points based on their relative density to one another and unlike k-means modelling, self-identifies the number of clusters through a calculation of density as a function of distance (epsilon) and a minimum number of neighbours (MinPts). The variable assigned to MinPts is usually set to the number of attributes, in this case 14, plus 1, giving a final value of MinPts = 15. Epsilon is calculated in a similar fashion to WCSS, and is plotted on the following page. In a similar fashion to selecting for K with the WCSS value, epsilon is decided by locating the ‘elbow’ in the plot. In this instance an epsilon of 200 was selected. When the model was run however the clustering result was ineffectual, with the vast majority of observations evaluated into a single cluster (cluster 0) with a resignation rate (17.1%) similar to the firm wide value (16.1%) in figure 1.
+
+> Insert Image Here
+
+> Insert Image Here
+
+<h4> Model 2 Re-worked: DBSCAN (Eps 100) </h4>
+
+Following the over-clustering of the previous DBSCAN Model, the algorithm was recalibrated with a decreased epsilon value of 100 in an  attempt to raise the observation density required before the DBSCAN model attributed a cluster value to an observation. This change was made in an attempt to coerce the DBSCAN algorithm into generating a productive clustering outcome model to aid in our investigation. In spite of this change, the resulting model was dominated by a single cluster
+and the algorithm classified a large number of variables as ‘noise’.
+
+> Insert Image Here
+
+<h2> Discussion: </h2>
+
+<h4> Recommended Model: </h4>
+Of the two approaches implemented in this analysis, the K-means model was able to produce a meaningful set of clusters, with the DBSCAN model proving ineffective. A likely cause for this error was the high dimensionality of the dataframe utilised in the models, and given an extended project timeline the dimensionality of the data could be refined to produce a clearer model of clusters. Out of the 4 models run in this analysis the re-worked Model 1 produced the most applicable set of clusters upon which the following recommendations are based. Cluster 0 is a key cohort for the management team to address and its general characteristics are laid out below. It captures approximately 33% of the total employee structure and has a rate of resignation of 26.2%, or just over 1 in 4 employees.
+
+<h4> Overtime: </h4>
+
+has been identified throughout this report as a major factor contributing to the likelihood of employee resignation. Within cluster 0, If an employee worked overtime they were more likely to resign, than to continue their tenure with the company. Reducing the % of employees who are required to work overtime should be a core priority for the management team.
+
+> Insert Image Next to Text if Possible.
+
+<h4> Average Weekly Hours Worked (AWHW): </h4>
+
+AWHW is inherently tied to Overtime, however it provides more detailed insights than the binary attribute it falls under. Employees who complete over 40 AWHW but remain under 45, have a far higher retention rate than those who exceed 45 hours.
+
+> Insert Image
+
+<h4> Monthly Income: </h4>
+
+Monthly Income is another core attribute contributing to employee resignation. Within cluster 0, employee’s monthly income ranged from $1,009 to $3,622. Employees who earn under approximately $1,750 a month are more likely to resign than to continue their tenure with the company. Reducing the number of employees taking home less than $1,750 a month will reduce the rate of employee churn amongst low level employees.
+
+<h2> Recommendation: </h2>
+
+The data analysis team proposes the introduction of an employee incentive program tailored to target the three attributes summaries above; OverTime, Average Weekly Hours Worked & Monthly Income. The program would allow low income employees earning under $3,800 a month to apply to work an extra 5 hours across the working week in return for an elevated hourly rate across those extra hours. By encouraging employees to share the load of overtime hours, the program will directly reduce the total number of employees working over the critical 45 average hours per week. By directing this incentive at employees earning below $3,800, the program concurrently targets those who are earning below the at-risk monthly income threshold of $3,622 and offers them remuneration above their standard rate. This is designed to lift their monthly income as high as possible without crossing the high risk 45 hour mark. Additionally, Rather than seeing an increase in total overtime worked at the firm, this program is designed to redistribute the required labour and as such will not place additional financial stressors on the firm.
+
+<h2> Conclusion: </h2>
+
+This report steps through three core stages of the data science pipeline. First evaluating each attribute in an exploratory analysis, identifying target variables within the survey data (MonthlyIncome, Age, OverTime, AverageWeeklyHoursWorked) Following this stage, these identified attributes were used as a launching pad to undertake an analysis into the complex relationships between employee attributes and how these influence employee churn and attrition. Finally the report produced 􀃅 unsupervised machine learning models (2 K-Means & 2 DBSCAN), to cluster the data into meaningful groups, allowing for the generation and recommendation of an incentives program designed to retain high churn risk employees.
+
+<H4> Limitations: </H4>
+
+This report utilised the K-Means and the DBSCAN unsupervised machine learning
+models to interpret the complex data provided by Human Resources. These models, while effective, can be vastly improved through the implementation of various scaling techniques. Additionally, other machine learning techniques may have been better suited to the provided data, however an investigation into these alternate machine learning models was outside of the scope of this report.
+
+<H4> Additional Comments: </H4>
+
+Throughout the plotting process the colour schemes of Seaborn and Matplotlib repeatedly inverted, resulting in colouring against usual convention. ie. Blue for negative values ie ‘Resigned’ and Red for positive. This occurrence was also inconsistent, with some plots generating appropriately whilst others did not. The colour schemes used throughout this document should be amended to ensure they are consistent and in keeping with convention prior to circulation.
+
 
 
 
