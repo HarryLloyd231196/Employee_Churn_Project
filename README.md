@@ -158,10 +158,37 @@ Another cohort of concern identified in the exploratory analysis was employees w
 	width="45%">
 </p>
 
+<h4>Resignation by Average Weekly Hours Worked:</h4>
 
+The average weekly hours worked by an employee was also found through the initial data exploration to have a notable impact upon rates of resignation for Revolution Consulting’s employees.For the majority of RC’s employees, the average working week is 40 hours (Figure 5), there is however a considerable cohort of individuals who routinely work above this threshold. 
 
+<p align="center">
+	<img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/38b33be0-5483-43b1-96c5-17ea8ef45038"
+</p>
+	
+Interestingly, if an individual is required to work up to 45 hours a week, the additional workload has little influence on their likelihood to resign. However, when employees report working from approximately 50 hours to 60 hours a week, the likelihood they resign is substantially elevated (Figure 6).
 
+<p align="center">
+	<img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/905688c0-197a-4804-88e2-1457610ce69a"
+</p>
 
+<h3>Data Correlation Exploration:</h3>
 
+Following the initial data exploration four (4) key attributes were identified as having a marked influence upon employee resignation; Monthly Income, Age, OverTime, Average Weekly Hours Worked. These four key attributes were then used as a launch pad into an in-depth exploration of relationships between the attributes provided in the data set.
+
+<h4>Monthly Income / Average Weekly Hours Worked (AWHW):</h4>
+
+Based on the previous findings for Monthly Income and AWHW, the analysis team hypothesised that as an individual worked longer hours, they would expect to be financially rewarded as a result, and those who were not, would likely be the employees who resign.
+
+<p align="center">
+	<img
+src="https://github.com/HarryLloyd231196/Employee_Churn_Project/assets/142588638/be663e4f-c95a-4e02-baa5-7d799ee662f5"
+</p>
+
+Figure 7 illustrates Monthly Income as a function of AWHW for employees and reveals two key “at risk” clusters of employees. The first of these clusters is those employees working 40 hour weeks and receiving a Monthly Income of less than approximately $11,250. While it is difficult to discern from figure 7 alone the likelihood that employees falling into this grouping will resign, the plot demonstrates a clear relationship between the two attributes and their influence on an employee's decision to resign. The second cluster identified in figure 7 comprises those employees working approximately 49 to 57 hours a week and earning less than $11,250. Akin to the first cluster identified, this relationship between hours worked and remuneration has a clear influence on an employees propensity to resign. It is important to note in this second cluster, that as Monthly Income decreases the density of observations increases, with a clear concentration around employees earning $2,500 a month.
+
+<h4> Monthly Income / Years in Role: </h4>
 
 
